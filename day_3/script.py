@@ -37,13 +37,11 @@ def answer_2():
     for item in splitted:
         x = item.split(")")[0]
         if (x.find("(") == 0 and x.find(",") > 1):
-            
             mul_array.append(x)
     for item in mul_array:
         x = item.split("(")[1]
         y = x.split(",")
         if ((y[0]).isnumeric() and (y[-1]).isnumeric()):
-            
             updated_mul_array.append(y)   
     for mul_item in updated_mul_array:
         total += int(mul_item[0]) * int(mul_item[1])
